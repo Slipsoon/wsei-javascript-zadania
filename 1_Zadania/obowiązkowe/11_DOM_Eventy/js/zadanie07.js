@@ -1,9 +1,15 @@
+	// Zadanie 07
+
 document.addEventListener("DOMContentLoaded", function () {
 	document.querySelector('#element1').addEventListener('click', function (e) {
+		// 7.1
 		console.log('Event in #element1 fired!');
+		e.stopImmediatePropagation();
 	});
 
 	document.querySelector('#element2').addEventListener('click', function (e) {
+		// 7.1
+		e.stopImmediatePropagation();
 		console.log('Event in #element2 fired!');
 	});
 
@@ -17,9 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	document.querySelector('#element5').addEventListener('click', function (e) {
 		console.log('Event in #element5 fired!');
+		// 7.2
+		if (e.target.innerText !== "Element 4")
+			e.stopImmediatePropagation();
 	});
 	document.querySelector('#element5').addEventListener('click', function (e) {
 		console.log('Second event in #element5 fired!');
 	});
+
 
 });

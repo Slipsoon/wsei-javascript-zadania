@@ -20,9 +20,18 @@ document.addEventListener("DOMContentLoaded", function () {
       // Tutaj this wskazuje na element Window, bo funkcja została
       //wywołana bez żadnego kontekstu.
       console.log("innerFuncOne: ", this);
+        // Zadanie 9
+      b.style.backgroundColor = "blue";
     }
     innerFuncOne();
 
   });
-
+ 
 })
+
+/* 
+Komentarz do zadania 9:
+"Potrzebujesz użyć elementu o id ```b``` wewnątrz funkcji ```innerFuncOne```, żeby zmienić mu kolor."
+
+Odpowiedź: Poprzez odwołanie bezpośrednio do zmiennej do której przypisany jest element o id 'b'. (Przykład zamieszczony w w/w funkcji)
+*/
