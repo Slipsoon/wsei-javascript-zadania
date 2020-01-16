@@ -31,3 +31,9 @@ var animals = [
     }
 
 ]
+
+    // Zadanie 5
+    
+for (let i = 0; i < animals.length; i++)
+    for (animalDetail in animals[i])
+        console.log(animalDetail, animals[i][animalDetail]);
